@@ -1,0 +1,14 @@
+extends layout
+block content
+  div.text-center
+    p SignUp to become a member:
+    form(method='POST' action='/signup')
+      span
+        label(for='name') Name:
+        input#name.form-control(type='text', placeholder='name' name='name')
+      span
+        label(for='password') Password:
+        input#password.form-control(type='password', placeholder='password' name='password1')
+      label(for='password') Password again:
+        input#password.form-control(type='password', placeholder='password' name='password2')
+      button.btn.btn-primary(type='submit') Submit
